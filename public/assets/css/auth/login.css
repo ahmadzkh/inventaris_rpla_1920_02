@@ -1,0 +1,110 @@
+
+.container{
+    width: 600px;
+    margin: 150px auto;
+    background-color: rgb(24, 24, 24);
+}
+
+h3{
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 1.5rem;
+}
+
+.form{
+    width: 600px;
+    height: 600px;
+    position: relative;
+    margin: 0 auto 12% auto;
+    padding: 5px;
+    background: white;
+    transition-property: box-shadow;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.form:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px 10px;
+}
+
+.button-box{
+    width: 122px;
+    margin: 30px auto;
+    position: relative;
+    border: 1px solid #5000FF;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.button-box:hover{
+    box-shadow: 0 0 20px 5px #ff61241f;
+}
+
+.btn-toggle{
+    padding: 5px 40px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    outline: none;
+    color: white;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.btn-toggle:hover{
+    color: black;
+}
+
+.input-group{
+    border-bottom: 1px solid #999;
+}
+
+.input-group:active, .input-group:hover{
+    border-bottom: 1px solid #0091AD;
+}
+
+.input{
+    width: 310px;
+    border-radius: 0px;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+.btn-submit{
+    width: 100%;
+    padding: 5px 30px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+    background: linear-gradient(to right, #0091AD, #B7094C);
+    border: 0;
+    outline: none;
+}

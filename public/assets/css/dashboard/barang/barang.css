@@ -1,0 +1,30 @@
+.text-purple:hover {
+  color: #6B46FF;
+  cursor: pointer;
+}
+
+.brg {
+  font-size: 40pt;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+}
+
+.brg-img{
+  height: 320px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: auto;
+}
+
+.btn-purple {
+  background-color: #6b46ff;
+  color: white;
+}
+
+.container-fluid {
+  color: white;
+}

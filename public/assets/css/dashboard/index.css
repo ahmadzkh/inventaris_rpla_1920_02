@@ -1,0 +1,56 @@
+.new {
+  height: 400px;
+  margin: 20px 20px;
+}
+
+.stuff {
+  padding: 20px;
+  background-image: url("/assets/img/new-stuff.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.row-one {
+  margin: -50px 40px 0 40px;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.iconic {
+  font-size: 30px;
+}
+
+.btn-purple {
+  background: #7333ff;
+  color: whitesmoke;
+}
+
+.img-height{
+  height: 300px;
+  background-image: url("/assets/img/tables-stuff.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  vertical-align: middle;
+  align-items: center;
+  align-content: center;
+  margin-top: 5px;
+}
