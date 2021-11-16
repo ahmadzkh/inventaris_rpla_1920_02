@@ -89,7 +89,7 @@
                 <?php endif; ?>
             </div>
             <div class="mb-3">
-                <label for="jumlah_barang" class="mb-2">Quantity</label>
+                <label for="jumlah_barang" class="mb-2">Amount</label>
                 <input type="text" id="jumlah_barang" name="jumlah_barang" autocomplete="off"
                     value="<?= old('jumlah_barang'); ?>"
                     class="form-control form-control-sm <?= ($validation->hasError('jumlah_barang')) ? 'is-invalid' : ''; ?>">

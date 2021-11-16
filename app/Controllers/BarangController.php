@@ -34,7 +34,7 @@ class BarangController extends BaseController
     
     /**
      * @method
-     * @description untuk menampilkan halaman view barang
+     * @description untuk menampilkan halaman barang
      */
     public function index()
     {
@@ -56,6 +56,22 @@ class BarangController extends BaseController
         // dd($data['users']);
 
         return view('pages/barang/index', $data);
+    }
+
+    /**
+     * @method
+     * @description untuk menampilkan halaman detail barang
+     */
+    public function detail($id)
+    {
+        $data = [
+            'title' => 'UKOM | Detail Stuffs',
+            'barang' => $this->barangModel->where('id_barang', $id)->first(),
+        ];
+
+        // dd($data['users']);
+
+        return view('pages/barang/detail', $data);
     }
     
     /**
@@ -137,21 +153,25 @@ class BarangController extends BaseController
      */
     public function edit($id)
     {
+        $id = $id;
+
+        $barang = $this->barangModel->where('id_barang', $id)->first();
+        
+        if ($barang === NULL) {
+            session()->setFlashdata('missing', 'Stuff Not Found');
+            return redirect()->to('/dashboard/stuff');
+        }
+        
         $data = [
             'title' => 'UKOM | Edit Stuffs',
-            'id' => $this->barangModel->newkodebarang(),
+            'id' => $id,
+            'barang' => $barang,
             'lokasi' => $this->lokasiModel->findAll(),
             'sumber' => $this->sumberModel->findAll(),
             'supplier' => $this->supplierModel->findAll(),
             'validation' => \Config\Services::validation()
         ];
 
-        // dd($user);
-
-        if ($barang === NULL) {
-            session()->setFlashdata('missing', 'Stuff Not Found');
-            return redirect()->to('/dashboard/stuff');
-        }
         
         return view('pages/barang/edit', $data);
     }

@@ -58,6 +58,7 @@ $routes->get('/dashboard/stuffs', 'BarangController::index', ['filter' => 'AuthC
 $routes->post('/dashboard/stuffs', 'BarangController::index', ['filter' => 'AuthCheck']);
 $routes->get('/dashboard/stuffs/create', 'BarangController::create', ['filter' => 'AuthCheck']);
 $routes->post('/dashboard/stuffs/store', 'BarangController::store', ['filter' => 'AuthCheck']);
+$routes->get('/dashboard/stuffs/detail/(:alphanum)', 'BarangController::detail/$1', ['filter' => 'AuthCheck']);
 $routes->get('/dashboard/stuffs/edit/(:alphanum)', 'BarangController::edit/$1', ['filter' => 'AuthCheck']);
 $routes->post('/dashboard/stuffs/update/(:alphanum)', 'BarangController::update/$1', ['filter' => 'AuthCheck']);
 $routes->DELETE('/dashboard/stuffs/delete/(:alphanum)', 'BarangController::delete/$1', ['filter' => 'AuthCheck']);

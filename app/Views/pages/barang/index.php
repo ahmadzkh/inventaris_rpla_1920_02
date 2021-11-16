@@ -23,7 +23,7 @@
     </div>
 
     <?php if (session()->getFlashdata('message')) : ?>
-    <div class="row mt-3 me-auto ms-auto">
+    <div class="row mt-3 me-auto ms-auto mx-5">
         <div class="col p-0 m-0">
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <?= session()->getFlashdata('message'); ?>.
@@ -36,8 +36,10 @@
     <div class="row justify-content-center my-5">
         <?php foreach ($barang as $brg) : ?>
         <div class="col-auto">
-            <div class="card shadow bg-dark text-white" style="width: 21rem;">
-                <img src="/assets/img/<?= $brg['gambar']; ?>" class="card-img-top p-2 brg-img" alt="...">
+            <div class="card shadow bg-dark text-white" style="width: 21rem; height:510px">
+                <div class="brg-img p-3">
+                    <img src="/assets/img/<?= $brg['gambar']; ?>" class="card-img-top rounded" alt="...">
+                </div>
                 <div class="card-body">
                     <div class="row justify-content-between mb-3">
                         <div class="col-sm">
@@ -45,17 +47,7 @@
                             <h5 class="small mb-3"><?= $brg['id_barang']; ?></h5>
                             <p class="card-text"><?= $brg['spesifikasi'] ?>.</p>
                         </div>
-                        <div class="col-auto">
-                            <a href="/dashboard/stuffs/edit/<?= $brg['id_barang']; ?>"
-                                class="btn btn-outline-warning"><i class="fas fa-edit"></i></a>
-                            <form action="/dashboard/stuffs/delete/<?= $brg['id_barang']; ?>" method="post"
-                                class="d-inline">
-                                <?= csrf_field(); ?>
-                                <input type="text" hidden name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-outline-danger"
-                                    onclick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></button>
-                            </form>
-                        </div>
+
                     </div>
                     <a href="/dashboard/stuffs/detail/<?= $brg['id_barang']; ?>" class="btn btn-purple w-100">Go
                         Detail</a>
